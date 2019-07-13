@@ -1,0 +1,23 @@
+
+.outerone {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 99%;
+    height: 90px;   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.outerone div{
+    margin: 5px;
+    padding: 5px;
+}
+
+.avatar img{
+    width: auto; 
+    height: 70px;
+    border-radius: 50%;
+}
+
+.myIcon :hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}

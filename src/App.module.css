@@ -45,3 +45,7 @@ body{
  .activemenu {
     background-color: #3bd80d;
     color: black;  }
+
+   .logo li a:hover:not(.active) {
+      background-color: #3bd80d;
+    }   
