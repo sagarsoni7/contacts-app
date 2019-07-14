@@ -1,0 +1,11 @@
+.MyForm{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   flex-direction: column;
+}
+
+.MyForm *{
+    margin: 4px;
+    padding: 4px;
+}

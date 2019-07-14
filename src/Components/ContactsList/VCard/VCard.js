@@ -5,35 +5,35 @@ import deleteIcon from "../../../Assets/delete.png";
 
 
 
-const VCard = () => (
+const VCard = (props) => (
     <div className={classes.outerone}>
         <div className={classes.avatar}>
-            <img src="https://www.w3schools.com/howto/img_avatar.png"/>
+            <img alt="user" src="https://www.w3schools.com/howto/img_avatar.png"/>
         </div>
         <div>
             <div>
-                <strong>Name:</strong>Sagar Soni</div>
+                <strong>Name:</strong>{props.userFullName}</div>
             <div>
-                <strong>City:</strong>New Delhi</div>
+                <strong>City:</strong>{props.userCity}</div>
         </div>
         <div>
             <div>
-                <strong>Mobile:</strong>9996166717</div>
+                <strong>Mobile:</strong>{props.userMobile}</div>
             <div>
-                <strong>Phone:</strong>1666-232417</div>
+                <strong>Phone:</strong>{props.userPhone}</div>
         </div>
         <div>
             <div>
-                <strong>Email:</strong>sagar.soni@zoho.com</div>
+                <strong>Email:</strong>{props.userEmail}</div>
             <div>
-                <strong>Website:</strong>www.codeparadox.in</div>
+                <strong>Website:</strong>{props.userWebsite}</div>
         </div>
         <div>
             <div className={classes.myIcon}>
-                <a href="#"><img alt="Update Contact" src={toolIcon}/></a>
+                <a href={props.UpdateContactURL}><img alt="Update Contact" src={toolIcon}/></a>
             </div>
             <div className={classes.myIcon}>
-                <a href="#"><img alt="Delete Contact" src={deleteIcon}/></a>
+                <a href={props.DeleteContactURL}><img alt="Delete Contact" src={deleteIcon}/></a>
             </div>
         </div>
     </div>
