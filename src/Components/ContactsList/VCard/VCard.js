@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./VCard.module.css";
 import toolIcon from "../../../Assets/tools.png";
 import deleteIcon from "../../../Assets/delete.png";
-
+import {Link} from "react-router-dom";
 
 
 const VCard = (props) => (
@@ -30,10 +30,10 @@ const VCard = (props) => (
         </div>
         <div>
             <div className={classes.myIcon}>
-                <a href={props.UpdateContactURL}><img alt="Update Contact" src={toolIcon}/></a>
+                <Link to={`update-contact/${props.UpdateContactURL}`}><img alt="Update Contact" src={toolIcon}/></Link>
             </div>
             <div className={classes.myIcon}>
-                <a href={props.DeleteContactURL}><img alt="Delete Contact" src={deleteIcon}/></a>
+                <Link to={`delete-contacts/${props.DeleteContactURL}`}><img alt="Delete Contact" src={deleteIcon}/></Link>
             </div>
         </div>
     </div>

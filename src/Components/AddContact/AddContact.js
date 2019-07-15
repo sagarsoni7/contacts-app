@@ -28,8 +28,14 @@ class AddContact extends React.Component{
 
         //sending request to server to POST
         axios.post("https://my-contacts-app-f655e.firebaseio.com/contacts.json", {MyContact})
-        .then(res=>{
-            console.log(res);
+        .then(()=>{
+           alert("Successfully added the contact")
+        })
+        .catch(()=>{
+            alert("Failed to add contact")
+        })
+        .finally(()=>{
+            this.props.history.push(`/`)
         })
         
 

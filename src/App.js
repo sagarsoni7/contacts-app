@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './App.module.css';
-import {Route, Link} from "react-router-dom";
+import {Route, Link, Switch} from "react-router-dom";
 import {ContactsList} from "./Components/ContactsList";
 import {AddContact} from "./Components/AddContact";
 import {UpdateContact} from "./Components/UpdateContact";
@@ -23,10 +23,14 @@ class App extends React.Component{
                         </ul>
                          </nav>
                     </header>
-                    <Route exact path="/" component={ContactsList}/>
-                    <Route exact path="/add-contact" component={AddContact}/>
-                    <Route exact path="/update-contact" component={UpdateContact}/>
-                    <Route exact path="/delete-contacts" component={DeleteContacts}/>
+                  <Switch>
+                  <Route exact path="/" component={ContactsList}/>
+                  <Route exact path="/add-contact" component={AddContact}/>
+                  <Route exact path="/update-contact/:ContactID" component={UpdateContact}/>
+                  <Route exact path="/delete-contacts/:ContactID" component={DeleteContacts}/>
+                  <Route exact path="/update-contact" component={UpdateContact}/>
+                  <Route exact path="/delete-contacts" component={DeleteContacts}/>
+                  </Switch>
                 </div>
         );
     }

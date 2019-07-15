@@ -51,8 +51,8 @@ class ContactsList extends React.Component {
                         userPhone={contact[1].MyContact.userPhone}
                         userEmail={contact[1].MyContact.userEmail}
                         userWebsite={contact[1].MyContact.userWebsite}
-                        UpdateContactURL="#"
-                        DeleteContactURL="#"
+                        UpdateContactURL={contact[0]}
+                        DeleteContactURL={contact[0]}
                         />
                 ))}
                     
