@@ -24,7 +24,7 @@ class DeleteContacts extends React.Component{
 
 
     render(){
-        console.log(this.props);
+       
         if(this.props.active_nav!=="deleteContact"){
             this.props.myFunction("deleteContact");
         }
